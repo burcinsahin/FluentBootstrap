@@ -31,5 +31,13 @@ namespace FluentBootstrap
             }
             return builder;
         }
+
+        public static ComponentBuilder<TConfig, TTag> SetTarget<TConfig, TTag>(this ComponentBuilder<TConfig, TTag> builder, LinkTarget target)
+            where TConfig : BootstrapConfig
+            where TTag : Tag, IHasLinkExtensions
+        {
+            builder.Component.MergeAttribute("target", target.GetDescription());
+            return builder;
+        }
     }
 }

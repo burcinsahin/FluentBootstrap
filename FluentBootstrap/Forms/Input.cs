@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FluentBootstrap.Forms
 {
-    public class Input : FormControl, IHasValueAttribute, IHasNameAttribute
+    public class Input : FormControl, IHasValueAttribute, IHasNameAttribute, IHasRequiredAttribute
     {
         public Icon Icon { get; set; }
 

@@ -280,6 +280,14 @@ namespace FluentBootstrap
                 .SetText(text);
         }
 
+        public static ComponentBuilder<TConfig, Element> Header<TConfig, TComponent>(this BootstrapHelper<TConfig, TComponent> helper, object text = null)
+            where TConfig : BootstrapConfig
+            where TComponent : Component, ICanCreate<Tag>
+        {
+            return new ComponentBuilder<TConfig, Element>(helper.Config, new Element(helper, "header"))
+                .SetText(text);
+        }
+
         // List
 
         public static ComponentBuilder<TConfig, Typography.List> List<TConfig, TComponent>(this BootstrapHelper<TConfig, TComponent> helper, ListType listType = ListType.Unstyled)

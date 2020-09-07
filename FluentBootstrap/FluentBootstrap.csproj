@@ -94,6 +94,7 @@
     <Compile Include="Forms\HelpBlock.cs" />
     <Compile Include="Forms\Hidden.cs" />
     <Compile Include="Forms\IFormValidation.cs" />
+	<Compile Include="IHasRequiredAttribute.cs" />
     <Compile Include="Forms\Input.cs" />
     <Compile Include="Forms\InputButton.cs" />
     <Compile Include="Forms\InputGroup.cs" />
@@ -142,6 +143,7 @@
     <Compile Include="Links\IHasLinkExtensions.cs" />
     <Compile Include="Links\Link.cs" />
     <Compile Include="Links\LinkExtensions.cs" />
+	    <Compile Include="Links\LinkTarget.cs" />
     <Compile Include="ListGroups\ListGroup.cs" />
     <Compile Include="ListGroups\ListGroupExtensions.cs" />
     <Compile Include="ListGroups\ListGroupButton.cs" />
@@ -156,6 +158,13 @@
     <Compile Include="Misc\Jumbotron.cs" />
     <Compile Include="Misc\MiscExtensions.cs" />
     <Compile Include="Misc\PageHeader.cs" />
+	    <Compile Include="Modals\Modal.cs" />
+    <Compile Include="Modals\ModalBody.cs" />
+    <Compile Include="Modals\ModalExtensions.cs" />
+    <Compile Include="Modals\ModalFooter.cs" />
+    <Compile Include="Modals\ModalHeading.cs" />
+    <Compile Include="Modals\ModalSection.cs" />
+    <Compile Include="Modals\ModalTitle.cs" />
     <Compile Include="Navbars\Brand.cs" />
     <Compile Include="Navbars\INavbarComponent.cs" />
     <Compile Include="Navbars\Navbar.cs" />

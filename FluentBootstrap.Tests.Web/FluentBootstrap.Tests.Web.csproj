@@ -156,6 +156,7 @@
     <Content Include="Views\Tests\Images.cshtml" />
     <Content Include="Views\MvcTests\MvcForms.cshtml" />
     <Content Include="Views\Tests\Links.cshtml" />
+	<Content Include="Views\Tests\Modals.cshtml" />
     <None Include="Views\Tests\Typography.cshtml" />
     <None Include="Views\Tests\Buttons.cshtml" />
     <None Include="Views\Tests\Dropdowns.cshtml" />
