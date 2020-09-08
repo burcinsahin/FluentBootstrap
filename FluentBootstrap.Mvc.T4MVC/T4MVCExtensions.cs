@@ -4,11 +4,9 @@ using System.Linq;
 using System.Web.Mvc;
 using System.Web.Routing;
 using FluentBootstrap.Mvc;
-using FluentBootstrap.Mvc.Internals;
 using FluentBootstrap.Breadcrumbs;
 using FluentBootstrap.Buttons;
 using FluentBootstrap.Dropdowns;
-using FluentBootstrap.Internals;
 using FluentBootstrap.Links;
 using FluentBootstrap.ListGroups;
 using FluentBootstrap.MediaObjects;
@@ -19,6 +17,8 @@ using FluentBootstrap.Paginations;
 using FluentBootstrap.Thumbnails;
 using FluentBootstrap.Forms;
 using FluentBootstrap.Images;
+using FluentBootstrap.Interfaces;
+using FluentBootstrap.Mvc.Forms;
 
 namespace FluentBootstrap
 {
@@ -96,7 +96,7 @@ namespace FluentBootstrap
             this BootstrapHelper<MvcBootstrapConfig<TModel>, TComponent> helper, string src, ActionResult result, string alt = null)
             where TComponent : Component, ICanCreate<MediaObject>
         {
-            return new ComponentBuilder<MvcBootstrapConfig<TModel>, MediaObject>(helper.GetConfig(), helper.MediaObject(src, (string)null, alt).GetComponent())
+            return new ComponentBuilder<MvcBootstrapConfig<TModel>, MediaObject>(helper.GetConfig(), MediaObjectExtensions.MediaObject(helper, src, (string)null, alt).GetComponent())
                 .SetLinkAction(result);
         }
 

@@ -1,11 +1,9 @@
-﻿using FluentBootstrap.Paginations;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using FluentBootstrap.Interfaces;
+using FluentBootstrap.Links;
 
-namespace FluentBootstrap
+namespace FluentBootstrap.Paginations
 {
     public static class PaginationExtensions
     {

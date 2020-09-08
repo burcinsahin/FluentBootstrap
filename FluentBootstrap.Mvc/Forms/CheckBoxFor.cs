@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq.Expressions;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
-using FluentBootstrap.Mvc.Internals;
+using FluentBootstrap.Forms;
 
 namespace FluentBootstrap.Mvc.Forms
 {

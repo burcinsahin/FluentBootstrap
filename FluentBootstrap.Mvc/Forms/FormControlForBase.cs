@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using FluentBootstrap.Internals;
 using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
@@ -12,7 +11,6 @@ using System.Web.Mvc;
 using System.Web.Mvc.Html;
 using FluentBootstrap.Html;
 using FluentBootstrap.Forms;
-using FluentBootstrap.Mvc.Internals;
 
 namespace FluentBootstrap.Mvc.Forms
 {

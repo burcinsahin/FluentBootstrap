@@ -1,16 +1,15 @@
-﻿using FluentBootstrap.Forms;
-using FluentBootstrap.Mvc;
-using FluentBootstrap.Mvc.Forms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Web.Mvc;
 using System.Web.Routing;
-using FluentBootstrap.Internals;
+using FluentBootstrap.Forms;
+using FluentBootstrap.Interfaces;
+using FluentBootstrap.Typography;
 
-namespace FluentBootstrap
+namespace FluentBootstrap.Mvc.Forms
 {
     public static class MvcFormExtensions
     {

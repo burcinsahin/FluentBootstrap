@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
-using FluentBootstrap.Internals;
+using FluentBootstrap.Interfaces;
 
 namespace FluentBootstrap
 {  

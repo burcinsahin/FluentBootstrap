@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentBootstrap.Panels;
+﻿using FluentBootstrap.Interfaces;
 
-namespace FluentBootstrap
+namespace FluentBootstrap.Panels
 {
     public static class PanelExtensions
     {

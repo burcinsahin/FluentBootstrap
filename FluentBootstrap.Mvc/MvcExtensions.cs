@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Web.Mvc;
 using System.Web.Routing;
@@ -8,19 +7,17 @@ using System.Web.WebPages;
 using FluentBootstrap.Breadcrumbs;
 using FluentBootstrap.Buttons;
 using FluentBootstrap.Dropdowns;
-using FluentBootstrap.Images;
-using FluentBootstrap.Internals;
+using FluentBootstrap.Interfaces;
 using FluentBootstrap.Links;
 using FluentBootstrap.ListGroups;
 using FluentBootstrap.MediaObjects;
-using FluentBootstrap.Mvc;
 using FluentBootstrap.Navbars;
 using FluentBootstrap.Navs;
 using FluentBootstrap.Pagers;
 using FluentBootstrap.Paginations;
-using FluentBootstrap.Thumbnails;
+using FluentBootstrap.Typography;
 
-namespace FluentBootstrap
+namespace FluentBootstrap.Mvc
 {
     public static class MvcExtensions
     {
@@ -121,7 +118,7 @@ namespace FluentBootstrap
             this BootstrapHelper<MvcBootstrapConfig<TModel>, TComponent> helper, string src, string actionName, string controllerName, object routeValues = null, string alt = null)
             where TComponent : Component, ICanCreate<MediaObject>
         {
-            return new ComponentBuilder<MvcBootstrapConfig<TModel>, MediaObject>(helper.GetConfig(), helper.MediaObject(src, null, alt).GetComponent())
+            return new ComponentBuilder<MvcBootstrapConfig<TModel>, MediaObject>(helper.GetConfig(), MediaObjectExtensions.MediaObject(helper, src, null, alt).GetComponent())
                 .SetLinkAction(actionName, controllerName, routeValues);
         }
 

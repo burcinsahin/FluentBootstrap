@@ -1,12 +1,7 @@
 ﻿using FluentBootstrap.Html;
-using FluentBootstrap.Misc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using FluentBootstrap.Interfaces;
 
-namespace FluentBootstrap
+namespace FluentBootstrap.Misc
 {
     public static class MiscExtensions
     {

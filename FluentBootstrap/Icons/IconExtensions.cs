@@ -1,12 +1,6 @@
-﻿using FluentBootstrap.Html;
-using FluentBootstrap.Icons;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FluentBootstrap.Interfaces;
 
-namespace FluentBootstrap
+namespace FluentBootstrap.Icons
 {
     public static class IconExtensions
     {
@@ -23,7 +17,7 @@ namespace FluentBootstrap
             where TConfig : BootstrapConfig
             where TTag : Tag, IHasIconExtensions
         {
-            if (icon != FluentBootstrap.Icon.None)
+            if (icon != Icons.Icon.None)
             {
                 builder.Component.AddChild(builder.GetHelper().Icon(icon));
                 builder.Component.AddChild(builder.GetHelper().Content(" ")); // Add a space to give a little separation to the icon

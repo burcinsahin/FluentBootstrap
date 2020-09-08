@@ -1,7 +1,5 @@
 ﻿using System.Collections;
 using FluentBootstrap;
-using FluentBootstrap.Internals;
-using FluentBootstrap.Mvc.Internals;
 using FluentBootstrap.Typography;
 using HtmlAgilityPack;
 using System;

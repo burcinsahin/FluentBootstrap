@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FluentBootstrap;
+using FluentBootstrap.Interfaces;
 
 namespace FluentBootstrap.Grids
 {

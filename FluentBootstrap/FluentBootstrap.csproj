@@ -94,7 +94,8 @@
     <Compile Include="Forms\HelpBlock.cs" />
     <Compile Include="Forms\Hidden.cs" />
     <Compile Include="Forms\IFormValidation.cs" />
-	<Compile Include="IHasRequiredAttribute.cs" />
+    <Compile Include="Interfaces\IHasMaxLengthAttribute.cs" />
+    <Compile Include="Interfaces\IHasRequiredAttribute.cs" />
     <Compile Include="Forms\Input.cs" />
     <Compile Include="Forms\InputButton.cs" />
     <Compile Include="Forms\InputGroup.cs" />
@@ -116,7 +117,7 @@
     <Compile Include="Html\Element.cs" />
     <Compile Include="Html\HtmlExtensions.cs" />
     <Compile Include="Html\Paragraph.cs" />
-    <Compile Include="ICanCreate.cs" />
+    <Compile Include="Interfaces\ICanCreate.cs" />
     <Compile Include="Icons\Icon.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -125,11 +126,11 @@
     <Compile Include="Icons\IconExtensions.cs" />
     <Compile Include="Icons\IconSpan.cs" />
     <Compile Include="Icons\IHasIcon.cs" />
-    <Compile Include="IHasDisabledAttribute.cs" />
-    <Compile Include="IHasNameAttribute.cs" />
-    <Compile Include="IHasTextContent.cs" />
-    <Compile Include="IHasTitleAttribute.cs" />
-    <Compile Include="IHasValueAttribute.cs" />
+    <Compile Include="Interfaces\IHasDisabledAttribute.cs" />
+    <Compile Include="Interfaces\IHasNameAttribute.cs" />
+    <Compile Include="Interfaces\IHasTextContent.cs" />
+    <Compile Include="Interfaces\IHasTitleAttribute.cs" />
+    <Compile Include="Interfaces\IHasValueAttribute.cs" />
     <Compile Include="Images\Image.cs" />
     <Compile Include="Images\ImageBase.cs" />
     <Compile Include="Images\ImageExtensions.cs" />
@@ -143,7 +144,7 @@
     <Compile Include="Links\IHasLinkExtensions.cs" />
     <Compile Include="Links\Link.cs" />
     <Compile Include="Links\LinkExtensions.cs" />
-	    <Compile Include="Links\LinkTarget.cs" />
+    <Compile Include="Links\LinkTarget.cs" />
     <Compile Include="ListGroups\ListGroup.cs" />
     <Compile Include="ListGroups\ListGroupExtensions.cs" />
     <Compile Include="ListGroups\ListGroupButton.cs" />
@@ -158,7 +159,7 @@
     <Compile Include="Misc\Jumbotron.cs" />
     <Compile Include="Misc\MiscExtensions.cs" />
     <Compile Include="Misc\PageHeader.cs" />
-	    <Compile Include="Modals\Modal.cs" />
+    <Compile Include="Modals\Modal.cs" />
     <Compile Include="Modals\ModalBody.cs" />
     <Compile Include="Modals\ModalExtensions.cs" />
     <Compile Include="Modals\ModalFooter.cs" />
@@ -284,6 +285,7 @@
     <Content Include="Scripts\jquery-2.1.3.js" />
     <Content Include="Scripts\jquery-2.1.3.min.js" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

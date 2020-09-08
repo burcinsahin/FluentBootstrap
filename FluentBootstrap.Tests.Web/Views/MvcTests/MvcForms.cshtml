@@ -1,11 +1,18 @@
 ﻿@using System.Collections.Generic
 @using System.Linq
 @using FluentBootstrap;
+@using FluentBootstrap.Grids
+@using FluentBootstrap.Html
+@using FluentBootstrap.Mvc.Forms
+@using FluentBootstrap.Typography
+@using FluentBootstrap.Forms
+
+
 
 @model FluentBootstrap.Tests.Web.Models.MvcTests.ViewModel
 
 @using (Html.Bootstrap().Container().Begin())
-{    
+{
     @Html.Bootstrap().Heading1("Validation Summary")
     using (Html.Bootstrap().Div().SetId("test-validation-summary").Begin())
     {
@@ -151,7 +158,7 @@
         }
     }
 
-    <hr/>
+    <hr />
 
     @Html.Bootstrap().Heading1("TextArea For")
     using (Html.Bootstrap().Div().SetId("test-textarea-for").Begin())

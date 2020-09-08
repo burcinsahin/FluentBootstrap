@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentBootstrap.Links;
-using System.Web.Routing;
+﻿using FluentBootstrap.Interfaces;
 
-namespace FluentBootstrap
+namespace FluentBootstrap.Links
 {
     public static class LinkExtensions
     {

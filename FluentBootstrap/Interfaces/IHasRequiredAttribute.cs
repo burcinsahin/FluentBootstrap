@@ -1,4 +1,4 @@
-﻿namespace FluentBootstrap
+﻿namespace FluentBootstrap.Interfaces
 {
     public interface IHasRequiredAttribute
     {

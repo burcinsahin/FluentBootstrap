@@ -1,4 +1,12 @@
 ﻿@using FluentBootstrap;
+@using FluentBootstrap.Buttons
+@using FluentBootstrap.Dropdowns
+@using FluentBootstrap.Forms
+@using FluentBootstrap.Grids
+@using FluentBootstrap.Html
+@using FluentBootstrap.Icons
+@using FluentBootstrap.Typography
+@using FluentBootstrap.Interfaces
 
 @using (Html.Bootstrap().Container().Begin())
 {
@@ -11,9 +19,21 @@
             @form.Input("readonly2", "Normal Input", "Initial Value").SetReadonly(false)
         }
     }
-    
+
     <hr />
-    
+
+    @Html.Bootstrap().Heading1("Input Type")
+    using (Html.Bootstrap().Div().SetId("test-inputtype").Begin())
+    {
+        using (var form = Html.Bootstrap().Form().Begin())
+        {
+            @form.Input("email", "Email", null, null, FormInputType.Email).SetMaxLength(50)
+            @form.Submit()
+        }
+    }
+
+    <hr />
+
     @Html.Bootstrap().Heading1("Validation")
     using (Html.Bootstrap().Div().SetId("test-validation").Begin())
     {
@@ -46,7 +66,7 @@
         using (var form = Html.Bootstrap().Form().SetHorizontal(6).Begin())
         {
             @form.Input("horizontal", "Horizontal")
-            using(form.FormGroup().SetHorizontal(false).Begin())
+            using (form.FormGroup().SetHorizontal(false).Begin())
             {
                 @form.Input("not-horizontal", "Not Horizontal")
             }

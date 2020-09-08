@@ -1,7 +1,7 @@
 ﻿ 
 using System.ComponentModel;
 
-namespace FluentBootstrap
+namespace FluentBootstrap.Icons
 {
 	public enum Icon
 	{
