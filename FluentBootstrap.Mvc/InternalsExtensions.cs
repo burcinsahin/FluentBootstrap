@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Mvc;
-using FluentBootstrap.Internals;
+﻿using System.Web.Mvc;
 
-namespace FluentBootstrap.Mvc.Internals
+namespace FluentBootstrap.Mvc
 {
     public static class InternalsExtensions
     {

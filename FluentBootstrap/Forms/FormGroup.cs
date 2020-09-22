@@ -6,6 +6,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FluentBootstrap.Icons;
+using FluentBootstrap.Interfaces;
 
 namespace FluentBootstrap.Forms
 {

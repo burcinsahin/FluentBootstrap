@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentBootstrap.Tables;
+﻿using FluentBootstrap.Interfaces;
 
-namespace FluentBootstrap
+namespace FluentBootstrap.Tables
 {
     public static class TableExtensions
     {

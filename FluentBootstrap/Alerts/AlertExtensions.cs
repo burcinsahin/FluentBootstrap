@@ -1,11 +1,6 @@
-﻿using FluentBootstrap.Alerts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FluentBootstrap.Interfaces;
 
-namespace FluentBootstrap
+namespace FluentBootstrap.Alerts
 {
     public static class AlertExtensions
     {

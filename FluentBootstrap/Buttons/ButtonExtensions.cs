@@ -1,11 +1,7 @@
-﻿using FluentBootstrap.Buttons;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FluentBootstrap.Interfaces;
+using FluentBootstrap.Links;
 
-namespace FluentBootstrap
+namespace FluentBootstrap.Buttons
 {
     public static class ButtonExtensions
     {

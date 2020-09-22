@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace FluentBootstrap
+namespace FluentBootstrap.Links
 {
     public enum LinkTarget
     {

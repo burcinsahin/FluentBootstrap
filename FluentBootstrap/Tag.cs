@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 
 namespace FluentBootstrap
 {
     public abstract class Tag : Component
     {
-        protected readonly static object TagIndentKey = new object();
-        protected readonly static object LastToWriteKey = new object();
+        protected static readonly object TagIndentKey = new object();
+        protected static readonly object LastToWriteKey = new object();
 
         private string _tagName;
         public MergeableDictionary Attributes { get; private set; }

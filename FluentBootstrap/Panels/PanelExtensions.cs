@@ -1,14 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentBootstrap.Panels;
+﻿using FluentBootstrap.Interfaces;
 
-namespace FluentBootstrap
+namespace FluentBootstrap.Panels
 {
     public static class PanelExtensions
     {
+        public static ComponentBuilder<TConfig, AccordionPanelGroup> AccordionPanelGroup<TConfig, TComponent>(this BootstrapHelper<TConfig, TComponent> helper)
+            where TConfig : BootstrapConfig
+            where TComponent : Component, ICanCreate<AccordionPanelGroup>
+        {
+            return new ComponentBuilder<TConfig, AccordionPanelGroup>(helper.Config, new AccordionPanelGroup(helper));
+        }
+
         // Panel
 
         public static ComponentBuilder<TConfig, Panel> Panel<TConfig, TComponent>(this BootstrapHelper<TConfig, TComponent> helper, string title = null, int titleHeadingLevel = 4)

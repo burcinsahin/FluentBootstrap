@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using FluentBootstrap.Interfaces;
 using FluentBootstrap.ListGroups;
 
 namespace FluentBootstrap.Modals

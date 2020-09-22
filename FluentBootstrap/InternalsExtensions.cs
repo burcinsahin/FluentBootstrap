@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
+﻿using System.IO;
+using FluentBootstrap.Interfaces;
 
-namespace FluentBootstrap.Internals
+namespace FluentBootstrap
 {
     // This is a bit of a hack, but exposing internal members via extension methods in a separate namespace
     // was the only good way I could think of to allow extending libraries access without resorting to

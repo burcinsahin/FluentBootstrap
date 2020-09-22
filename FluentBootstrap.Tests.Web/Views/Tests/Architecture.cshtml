@@ -1,4 +1,13 @@
 ﻿@using FluentBootstrap;
+@using FluentBootstrap.Buttons
+@using FluentBootstrap.Dropdowns
+@using FluentBootstrap.Grids
+@using FluentBootstrap.Html
+@using FluentBootstrap.Icons
+@using FluentBootstrap.Mvc.Forms
+@using FluentBootstrap.Typography
+@using FluentBootstrap.Forms
+
 
 @using (Html.Bootstrap().Container().Begin())
 {
@@ -6,14 +15,14 @@
     using (Html.Bootstrap().Div().SetId("test-alternate-model").Begin())
     {
         var model = new { Foo = "Foo", Bar = true, Baz = 123 };
-        using(var form = Html.Bootstrap(model).Form().Begin())
+        using (var form = Html.Bootstrap(model).Form().Begin())
         {
             @form.EditorFor(x => x.Foo)
             @form.DisplayFor(x => x.Bar)
             @form.EditorFor(x => x.Baz)
         }
     }
-    
+
     <hr />
 
     @Html.Bootstrap().Heading1("Alternate Begin Syntax")

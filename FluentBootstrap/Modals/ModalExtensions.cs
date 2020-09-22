@@ -1,4 +1,6 @@
-﻿namespace FluentBootstrap.Modals
+﻿using FluentBootstrap.Interfaces;
+
+namespace FluentBootstrap.Modals
 {
     public static class ModalExtensions
     {

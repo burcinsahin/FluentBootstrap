@@ -1,15 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Routing;
-using FluentBootstrap.Forms;
-using System.Linq.Expressions;
-using System.Globalization;
-using FluentBootstrap.Internals;
+using FluentBootstrap.Buttons;
+using FluentBootstrap.Icons;
+using FluentBootstrap.Interfaces;
 
-namespace FluentBootstrap
+namespace FluentBootstrap.Forms
 {
     public static class FormExtensions
     {
@@ -168,7 +163,7 @@ namespace FluentBootstrap
             return builder;
         }
 
-        // Input
+        #region Input
 
         public static ComponentBuilder<TConfig, Input> Input<TConfig, TComponent>(this BootstrapHelper<TConfig, TComponent> helper, string name = null, string label = null, object value = null, string valueFormat = null, FormInputType inputType = FormInputType.Text)
             where TConfig : BootstrapConfig
@@ -204,6 +199,7 @@ namespace FluentBootstrap
             }
             return builder;
         }
+        #endregion
 
         // TextArea
 

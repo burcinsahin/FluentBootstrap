@@ -1,4 +1,6 @@
-﻿@using FluentBootstrap.Modals
+﻿@using FluentBootstrap.Buttons
+@using FluentBootstrap.Icons
+@using FluentBootstrap.Modals
 @Html.Bootstrap().Button("Modal").SetIcon(Icon.ModalWindow).AddAttributes(new Dictionary<string, object> { { "data-target", "#testModal" }, { "data-toggle", "modal" } })
 @using (Html.Bootstrap().Modal("Title").SetId("testModal").Begin())
 {

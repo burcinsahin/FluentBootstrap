@@ -1,0 +1,43 @@
+﻿@using FluentBootstrap.Grids
+@using FluentBootstrap.Html
+@using FluentBootstrap.Panels
+@using FluentBootstrap.Typography
+
+@using (Html.Bootstrap().Container().Begin())
+{
+    @Html.Bootstrap().Heading1("Simple Panel")
+    using (Html.Bootstrap().Div().SetId("test-simple").Begin())
+    {
+        using (var panel = Html.Bootstrap().Panel("Panel Title", 1).Begin())
+        {
+            using (panel.PanelBody().Begin())
+            {
+                <p>Panel Content</p>
+            }
+        }
+    }
+
+    <hr />
+
+    @Html.Bootstrap().Heading1("Accordion Panel")
+    using (Html.Bootstrap().Div().SetId("test-accordion").Begin())
+    {
+        using (var accordion = Html.Bootstrap().AccordionPanelGroup().Begin())
+        {
+            using (var p1 = accordion.Panel("Title 1").Begin())
+            {
+                using (p1.PanelBody().Begin())
+                {
+                    <p>Body Content</p>
+                }
+            }
+            using (var p2 = accordion.Panel("Title 2").Begin())
+            {
+                using (p2.PanelBody().Begin())
+                {
+                    <p>Body Content</p>
+                }
+            }
+        }
+    }
+}

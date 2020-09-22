@@ -1,4 +1,7 @@
-﻿@using (Html.Bootstrap().Container().Begin())
+﻿@using FluentBootstrap.Grids
+@using FluentBootstrap.Html
+@using FluentBootstrap.Typography
+@using (Html.Bootstrap().Container().Begin())
 {
     @Html.Bootstrap().Heading1("With Child")
     using (Html.Bootstrap().Div().SetId("test-with-child").Begin())

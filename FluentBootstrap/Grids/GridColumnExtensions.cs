@@ -1,11 +1,4 @@
-﻿using FluentBootstrap.Grids;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FluentBootstrap
+﻿namespace FluentBootstrap.Grids
 {
     public static class GridColumnExtensions
     {

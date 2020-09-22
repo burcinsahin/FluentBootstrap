@@ -1,11 +1,6 @@
-﻿using FluentBootstrap.Thumbnails;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FluentBootstrap.Interfaces;
 
-namespace FluentBootstrap
+namespace FluentBootstrap.Thumbnails
 {
     public static class ThumbnailExtensions
     {

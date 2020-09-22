@@ -5,10 +5,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FluentBootstrap.Interfaces;
 
 namespace FluentBootstrap.Forms
 {
-    public class Input : FormControl, IHasValueAttribute, IHasNameAttribute, IHasRequiredAttribute
+    public class Input
+        : FormControl, IHasValueAttribute, IHasNameAttribute,
+            IHasRequiredAttribute, IHasMaxLengthAttribute
     {
         public Icon Icon { get; set; }
 

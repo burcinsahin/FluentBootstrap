@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FluentBootstrap
+﻿namespace FluentBootstrap.Interfaces
 {
     // Implement this interface directly from a component to indicate it can create a different component
     public interface ICanCreate<in TComponent>

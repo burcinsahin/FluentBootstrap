@@ -1,4 +1,6 @@
 using System.IO;
+using FluentBootstrap.Interfaces;
+using FluentBootstrap.Panels;
 
 namespace FluentBootstrap.Modals
 {
