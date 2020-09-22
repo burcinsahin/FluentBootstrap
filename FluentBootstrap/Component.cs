@@ -11,8 +11,8 @@ namespace FluentBootstrap
 {  
     public abstract class Component
     {
-        protected readonly static object ComponentStackKey = new object();
-        protected readonly static object OutputStackKey = new object();
+        protected static readonly object ComponentStackKey = new object();
+        protected static readonly object OutputStackKey = new object();
 
         private bool _started;
         private bool _finished;
