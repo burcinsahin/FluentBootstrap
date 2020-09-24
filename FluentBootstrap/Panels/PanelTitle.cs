@@ -25,13 +25,19 @@ namespace FluentBootstrap.Panels
                 GetHelper().PanelHeading().Component.Start(writer);
             }
 
-            var accordionPanelGroup = GetComponent<AccordionPanelGroup>();
-            if (accordionPanelGroup != null)
+            var panel = GetComponent<Panel>();
+            if (panel != null && panel.Collapsible)
             {
                 var link = GetHelper()
-                    .Link(TextContent, $"#{accordionPanelGroup.GetAttribute("id")}_panel{accordionPanelGroup.PanelCounter}")
-                    .AddAttribute("data-toggle", "collapse")
-                    .AddAttribute("data-parent", $"#{accordionPanelGroup.GetAttribute("id")}");
+                    .Link(TextContent, $"#{panel.GetId()}_collapse")
+                    .AddAttribute("data-toggle", "collapse");
+
+                var accordionPanelGroup = GetComponent<AccordionPanelGroup>();
+                if (accordionPanelGroup != null)
+                {
+                    link.AddAttribute("data-parent", $"#{accordionPanelGroup.GetAttribute("id")}");
+                }
+
                 AddChild(link);
                 TextContent = null;
             }

@@ -11,8 +11,7 @@ namespace FluentBootstrap.Panels
             return new ComponentBuilder<TConfig, AccordionPanelGroup>(helper.Config, new AccordionPanelGroup(helper));
         }
 
-        // Panel
-
+        #region Panel
         public static ComponentBuilder<TConfig, Panel> Panel<TConfig, TComponent>(this BootstrapHelper<TConfig, TComponent> helper, string title = null, int titleHeadingLevel = 4)
             where TConfig : BootstrapConfig
             where TComponent : Component, ICanCreate<Panel>
@@ -31,6 +30,27 @@ namespace FluentBootstrap.Panels
             builder.Component.ToggleCss(state);
             return builder;
         }
+
+        public static ComponentBuilder<TConfig, Panel> SetExpanded<TConfig>(this ComponentBuilder<TConfig, Panel> builder)
+            where TConfig : BootstrapConfig
+        {
+            builder.Component.Expanded = true;
+            return builder;
+        }
+
+        /// <summary>
+        /// Set collapsible panel initial state as expanded. Default state is colllapsed
+        /// </summary>
+        /// <typeparam name="TConfig"></typeparam>
+        /// <param name="builder"></param>
+        /// <returns></returns>
+        public static ComponentBuilder<TConfig, Panel> SetCollapsible<TConfig>(this ComponentBuilder<TConfig, Panel> builder)
+            where TConfig : BootstrapConfig
+        {
+            builder.Component.Collapsible = true;
+            return builder;
+        }
+        #endregion
 
         // Sections
 

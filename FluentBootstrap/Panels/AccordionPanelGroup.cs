@@ -16,7 +16,7 @@ namespace FluentBootstrap.Panels
         #region Overrides of Tag
         protected override void OnStart(TextWriter writer)
         {
-            if (string.IsNullOrWhiteSpace(GetAttribute("id")))
+            if (string.IsNullOrWhiteSpace(GetId()))
             {
                 GetBuilder(this).SetId($"accordion{DateTime.Now.Ticks}");
             }

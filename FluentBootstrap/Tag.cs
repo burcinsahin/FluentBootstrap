@@ -22,6 +22,12 @@ namespace FluentBootstrap
         public bool PrettyPrint { get; set; }  // Set to false to suppress pretty printing, even if turned on globally (I.e., for links)
         public bool OutputEndTag { get; set; }
 
+        protected internal string Id
+        {
+            get => GetAttribute("id");
+            set => MergeAttribute("id", value);
+        }
+
         protected Tag(BootstrapHelper helper, string tagName, params string[] cssClasses)
             : base(helper)
         {
@@ -89,6 +95,11 @@ namespace FluentBootstrap
         {
             return Attributes.GetValue(key);
         }
+
+        protected internal string GetId()
+        {
+            return GetAttribute("id");
+        }   
 
         public void MergeStyles(object attributes)
         {
