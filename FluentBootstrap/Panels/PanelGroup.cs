@@ -4,11 +4,15 @@ using FluentBootstrap.Interfaces;
 
 namespace FluentBootstrap.Panels
 {
-    public class AccordionPanelGroup : Tag, ICanCreate<Panel>
+    /// <summary>
+    /// Component to group panels and add accordion ability if desired
+    /// </summary>
+    public class PanelGroup : Tag, ICanCreate<Panel>
     {
         internal int PanelCounter { get; set; }
+        public bool Accordion { get; set; }
 
-        public AccordionPanelGroup(BootstrapHelper helper)
+        public PanelGroup(BootstrapHelper helper)
             : base(helper, "div", Css.PanelGroup)
         {
         }
@@ -16,7 +20,7 @@ namespace FluentBootstrap.Panels
         #region Overrides of Tag
         protected override void OnStart(TextWriter writer)
         {
-            if (string.IsNullOrWhiteSpace(GetId()))
+            if (Accordion && string.IsNullOrWhiteSpace(Id))
             {
                 GetBuilder(this).SetId($"accordion{DateTime.Now.Ticks}");
             }

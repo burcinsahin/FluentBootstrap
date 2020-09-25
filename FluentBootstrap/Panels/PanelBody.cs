@@ -19,7 +19,7 @@ namespace FluentBootstrap.Panels
             {
                 var builder = GetHelper().Div()
                     .AddCss(Css.PanelCollapse, Css.Collapse)
-                    .SetId($"{panel.GetId()}_collapse");
+                    .SetId($"{panel.Id}_collapse");
                 if (panel.Expanded) builder.Component.AddCss(Css.In);
 
                 builder.Component.Start(writer);

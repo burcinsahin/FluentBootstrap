@@ -33,10 +33,10 @@
 
     <hr />
 
-    @Html.Bootstrap().Heading1("Accordion Panel")
-    using (Html.Bootstrap().Div().SetId("test-accordion").Begin())
+    @Html.Bootstrap().Heading1("Panel Group")
+    using (Html.Bootstrap().Div().SetId("test-group").Begin())
     {
-        using (var accordion = Html.Bootstrap().AccordionPanelGroup().Begin())
+        using (var accordion = Html.Bootstrap().PanelGroup().Begin())
         {
             using (var p1 = accordion.Panel("Title 1").Begin())
             {
@@ -45,7 +45,7 @@
                     <p>Body Content</p>
                 }
             }
-            using (var p2 = accordion.Panel("Title 2").SetExpanded().Begin())
+            using (var p2 = accordion.Panel("Title 2").SetCollapsible().Begin())
             {
                 using (p2.PanelBody().Begin())
                 {
@@ -57,10 +57,10 @@
 
     <hr />
 
-    @Html.Bootstrap().Heading1("Accordion Panel")
+    @Html.Bootstrap().Heading1("Accordion Panel Group")
     using (Html.Bootstrap().Div().SetId("test-accordion").Begin())
     {
-        using (var accordion = Html.Bootstrap().AccordionPanelGroup().Begin())
+        using (var accordion = Html.Bootstrap().PanelGroup(true).Begin())
         {
             using (var p1 = accordion.Panel("Title 1").Begin())
             {

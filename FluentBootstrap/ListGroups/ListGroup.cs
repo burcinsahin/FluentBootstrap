@@ -1,10 +1,4 @@
-﻿using FluentBootstrap.Badges;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentBootstrap.Interfaces;
+﻿using FluentBootstrap.Interfaces;
 
 namespace FluentBootstrap.ListGroups
 {
@@ -15,6 +9,7 @@ namespace FluentBootstrap.ListGroups
         internal ListGroup(BootstrapHelper helper)
             : base(helper, "div", Css.ListGroup)
         {
+            //TODO:collapse
         }
     }
 }

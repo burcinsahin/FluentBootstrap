@@ -4,11 +4,11 @@ namespace FluentBootstrap.Panels
 {
     public static class PanelExtensions
     {
-        public static ComponentBuilder<TConfig, AccordionPanelGroup> AccordionPanelGroup<TConfig, TComponent>(this BootstrapHelper<TConfig, TComponent> helper)
+        public static ComponentBuilder<TConfig, PanelGroup> PanelGroup<TConfig, TComponent>(this BootstrapHelper<TConfig, TComponent> helper, bool accordion = false)
             where TConfig : BootstrapConfig
-            where TComponent : Component, ICanCreate<AccordionPanelGroup>
+            where TComponent : Component, ICanCreate<PanelGroup>
         {
-            return new ComponentBuilder<TConfig, AccordionPanelGroup>(helper.Config, new AccordionPanelGroup(helper));
+            return new ComponentBuilder<TConfig, PanelGroup>(helper.Config, new PanelGroup(helper) { Accordion = accordion });
         }
 
         #region Panel

@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using FluentBootstrap.ListGroups;
 using FluentBootstrap.Interfaces;
 
@@ -20,13 +21,21 @@ namespace FluentBootstrap.Panels
         #region Overrides of Tag
         protected override void OnStart(TextWriter writer)
         {
-            var accordionPanelGroup = GetComponent<AccordionPanelGroup>();
-            if (accordionPanelGroup != null)
+            var panelGroup = GetComponent<PanelGroup>();
+            if (panelGroup != null)
             {
-                Collapsible = true;
+                if (panelGroup.Accordion)
+                {
+                    Collapsible = true;
+                    if (string.IsNullOrWhiteSpace(Id))
+                        Id = $"{panelGroup.Id}_panel{panelGroup.PanelCounter}";
+                }
+                panelGroup.PanelCounter++;
+            }
+            else if (Collapsible)
+            {
                 if (string.IsNullOrWhiteSpace(Id))
-                    Id = $"{accordionPanelGroup.GetId()}_panel{accordionPanelGroup.PanelCounter}";
-                accordionPanelGroup.PanelCounter++;
+                    Id = $"panel{DateTime.Now.Ticks}";
             }
             base.OnStart(writer);
         }

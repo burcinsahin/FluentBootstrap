@@ -22,6 +22,9 @@ namespace FluentBootstrap
         public bool PrettyPrint { get; set; }  // Set to false to suppress pretty printing, even if turned on globally (I.e., for links)
         public bool OutputEndTag { get; set; }
 
+        /// <summary>
+        /// Gets or sets id attribute of component
+        /// </summary>
         protected internal string Id
         {
             get => GetAttribute("id");
@@ -95,11 +98,6 @@ namespace FluentBootstrap
         {
             return Attributes.GetValue(key);
         }
-
-        protected internal string GetId()
-        {
-            return GetAttribute("id");
-        }   
 
         public void MergeStyles(object attributes)
         {
